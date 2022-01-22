@@ -23,19 +23,39 @@ void PrintArray(int[] col)
 }
 
 // Команда: Создай новый массив array в котором будет 10 элементов 
-int[] array = new int[10];
+int[] array1 = new int[10];
 // Заполняем массив array случайными числами.
-FillArray(array);
+FillArray(array1);
 // Выводим массив array в консоль.
-PrintArray(array);
+PrintArray(array1);
 Console.WriteLine();
-//Определяем количество чётных элементов
+// Определяем количество чётных элементов в массиве
 int honest = 0;
-for (int i = 0; i < array.Length; i++)
+for (int i = 0; i < array1.Length; i++)
 {
-    if (array[i] % 2 == 0)
+    if (array1[i] % 2 == 0)
     {
         honest = honest + 1;
     }
 }
 Console.WriteLine(honest);
+// Создаём массив с длинной равному колличеству 
+// чётных элементов в изначальном массиве
+int [] array2 = new int [honest];
+// Заполняем новый массив чётными элементами из изначального массива
+int j = 0;
+int q = 0;
+while (j < array1.Length)
+{
+    if (array1[j] % 2 == 0)
+    {
+        array2[q] = array1[j];
+        j++;
+        q++;
+    }
+    else
+    {
+        j++;
+    }
+}
+PrintArray(array2);
