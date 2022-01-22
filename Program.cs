@@ -9,7 +9,6 @@ void FillArray(int[] collection)
         index++;
     }
 }
-
 // Метод вывода (Print) в консоль массива.
 void PrintArray(int[] col)
 {
@@ -21,14 +20,12 @@ void PrintArray(int[] col)
          position++;
     }
 }
-
 // Команда: Создай новый массив array в котором будет 10 элементов 
 int[] array1 = new int[10];
 // Заполняем массив array случайными числами.
 FillArray(array1);
 // Выводим массив array в консоль.
-PrintArray(array1);
-Console.WriteLine();
+// PrintArray(array1);
 // Определяем количество чётных элементов в массиве
 int honest = 0;
 for (int i = 0; i < array1.Length; i++)
@@ -38,7 +35,7 @@ for (int i = 0; i < array1.Length; i++)
         honest = honest + 1;
     }
 }
-Console.WriteLine(honest);
+// Console.WriteLine(honest);
 // Создаём массив с длинной равному колличеству 
 // чётных элементов в изначальном массиве
 int [] array2 = new int [honest];
@@ -58,4 +55,7 @@ while (j < array1.Length)
         j++;
     }
 }
+Console.Write("Из имеющегося массива целых чисел: ");
+PrintArray(array1);
+Console.Write(" формируем массив из четных чисел: ");
 PrintArray(array2);
